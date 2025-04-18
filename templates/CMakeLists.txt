@@ -1,0 +1,5 @@
+
+add_executable(preorder_traversal preorder_traversal.cpp)
+add_executable(inorder_traversal inorder_traversal.cpp)
+add_executable(postorder_traversal postorder_traversal.cpp)
+add_executable(level_order_traversal level_order_traversal.cpp)
