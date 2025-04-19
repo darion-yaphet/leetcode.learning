@@ -5,6 +5,7 @@
 // https://leetcode.cn/problems/island-perimeter/description/
 
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
@@ -35,4 +36,51 @@ public:
         }
         return ans;
     }
+
+    int islandPerimeter2(vector<vector<int>>& grid) {
+        int rows = grid.size();       // 网格行数
+
+        // 特殊情况：空网格
+        if (rows == 0) {
+            return 0;
+        }
+
+        int cols = grid[0].size();    // 网格列数
+        int perimeter = 0;            // 岛屿周长
+
+        // 遍历网格中的每个单元格
+        for (int i = 0; i < rows; ++i) {
+            for (int j = 0; j < cols; ++j) {
+                if (grid[i][j] == 1) { // 如果是陆地
+                    perimeter += 4;   // 每块陆地初始贡献 4 条边
+
+                    // 检查上方是否是陆地
+                    if (i > 0 && grid[i - 1][j] == 1) {
+                        perimeter -= 2; // 减去共享边
+                    }
+
+                    // 检查左方是否是陆地
+                    if (j > 0 && grid[i][j - 1] == 1) {
+                        perimeter -= 2; // 减去共享边
+                    }
+                }
+            }
+        }
+
+        return perimeter;
+    }
 };
+
+int main() {
+    vector<vector<int>> grid = {
+        {0, 1, 0, 0},
+        {1, 1, 1, 0},
+        {0, 1, 0, 0},
+        {1, 1, 0, 0}
+    };
+
+    Solution solution;
+    cout << "Island Perimeter: " << solution.islandPerimeter(grid) << endl;
+
+    return 0;
+}

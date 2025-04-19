@@ -6,6 +6,8 @@
 
 using namespace std;
 
+// https://leetcode.cn/problems/search-insert-position/
+
 class Solution {
 public:
     int searchInsert(vector<int> &nums, int target) {

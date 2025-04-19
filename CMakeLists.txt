@@ -17,6 +17,7 @@ add_executable(jump-game jump-game.cpp)
 add_executable(jump-game-ii jump-game-ii.cpp)
 add_executable(assign-cookies assign-cookies.cpp)
 add_executable(wiggle-subsequence wiggle-subsequence.cpp)
+add_executable(wiggle-sort-ii wiggle-sort-ii.cpp)
 add_executable(array-partition array-partition.cpp)
 add_executable(valid-palindrome-ii valid-palindrome-ii.cpp)
 add_executable(remove-k-digits remove-k-digits.cpp)
@@ -171,6 +172,8 @@ add_executable(maximum-length-of-repeated-subarray maximum-length-of-repeated-su
 add_executable(maximum-product-subarray maximum-product-subarray.cpp)
 add_executable(knight-probability-in-chessboard knight-probability-in-chessboard.cpp)
 add_executable(partition-equal-subset-sum partition-equal-subset-sum.cpp)
+add_executable(interleaving-string interleaving-string.cpp)
+add_executable(count-the-number-of-fair-pairs count-the-number-of-fair-pairs.cpp)
 
 # 0-1 Package
 
@@ -246,6 +249,7 @@ add_executable(rotate-list rotate-list.cpp)
 add_executable(reverse-string-ii reverse-string-ii.cpp)
 add_executable(sort-list sort-list.cpp)
 add_executable(reorder-list reorder-list.cpp)
+add_executable(odd-even-linked-list odd-even-linked-list.cpp)
 
 
 # Heap
@@ -264,9 +268,11 @@ add_executable(find-first-and-last-position-of-element-in-sorted-array find-firs
 add_executable(find-minimum-in-rotated-sorted-array find-minimum-in-rotated-sorted-array.cpp)
 add_executable(search-in-rotated-sorted-array search-in-rotated-sorted-array.cpp)
 add_executable(search-in-rotated-sorted-array-ii search-in-rotated-sorted-array-ii.cpp)
+add_executable(median-of-two-sorted-arrays median-of-two-sorted-arrays.cpp)
 
 # Graph
 add_executable(island-perimeter island-perimeter.cpp)
+add_executable(number-of-islands number-of-islands.cpp)
 add_executable(number-of-closed-islands number-of-closed-islands.cpp)
 add_executable(number-of-enclaves number-of-enclaves.cpp)
 add_executable(max-area-of-island max-area-of-island.cpp)

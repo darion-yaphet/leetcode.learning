@@ -32,13 +32,23 @@ public:
         return ans;
     }
 
-    int maxProduct3(vector<int>& nums) {
-        if (nums.empty()) return 0; // 空数组直接返回 0
+    /**
+     * 如果 nums[i] > 0，则：
+     * maxProduct=max(maxProduct×nums[i],nums[i])
+     * minProduct=min(minProduct×nums[i],nums[i])
+     *
+     * 如果 nums[i] < 0，则交换 maxProduct 和 minProduct，因为负数会反转最大值和最小值的关系。
+     */
+    int maxProduct3(vector<int> &nums) {
+        // 空数组直接返回 0
+        if (nums.empty()) {
+            return 0;
+        }
 
         // 初始化变量
         int maxProduct = nums[0]; // 当前最大乘积
         int minProduct = nums[0]; // 当前最小乘积
-        int result = nums[0];     // 全局最大乘积
+        int result = nums[0]; // 全局最大乘积
 
         for (int i = 1; i < nums.size(); ++i) {
             int num = nums[i];
