@@ -57,4 +57,49 @@ public:
 
         return dummyHead->next;
     }
+
+    ListNode* sortList2(ListNode* head) {
+        if (!head || !head->next) return head; // 空链表或单节点链表直接返回
+
+        // 第一步：找到链表的中点
+        ListNode* mid = findMiddle2(head);
+        ListNode* rightHead = mid->next;
+        mid->next = nullptr; // 断开链表
+
+        // 第二步：递归排序左右两部分
+        ListNode* left = sortList2(head);      // 排序左半部分
+        ListNode* right = sortList2(rightHead); // 排序右半部分
+
+        // 第三步：合并两个已排序的链表
+        return merge2(left, right);
+    }
+
+    ListNode* findMiddle2(ListNode* head) {
+        ListNode* slow = head;
+        ListNode* fast = head->next;
+        while (fast && fast->next) {
+            slow = slow->next;
+            fast = fast->next->next;
+        }
+        return slow;
+    }
+
+    ListNode* merge2(ListNode* l1, ListNode* l2) {
+        ListNode dummy(0); // 创建虚拟头节点
+        ListNode* tail = &dummy;
+
+        while (l1 && l2) {
+            if (l1->val < l2->val) {
+                tail->next = l1;
+                l1 = l1->next;
+            } else {
+                tail->next = l2;
+                l2 = l2->next;
+            }
+            tail = tail->next;
+        }
+
+        tail->next = l1 ? l1 : l2; // 连接剩余部分
+        return dummy.next;
+    }
 };
