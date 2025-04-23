@@ -174,6 +174,10 @@ add_executable(knight-probability-in-chessboard knight-probability-in-chessboard
 add_executable(partition-equal-subset-sum partition-equal-subset-sum.cpp)
 add_executable(interleaving-string interleaving-string.cpp)
 add_executable(count-the-number-of-fair-pairs count-the-number-of-fair-pairs.cpp)
+add_executable(different-ways-to-add-parentheses different-ways-to-add-parentheses.cpp)
+add_executable(longest-arithmetic-subsequence-of-given-difference longest-arithmetic-subsequence-of-given-difference.cpp)
+add_executable(destroy-sequential-targets destroy-sequential-targets.cpp)
+add_executable(number-of-longest-increasing-subsequence number-of-longest-increasing-subsequence.cpp)
 
 # 0-1 Package
 
@@ -286,6 +290,7 @@ add_executable(redundant-connection redundant-connection.cpp)
 add_executable(nim-game nim-game.cpp)
 add_executable(palindrome-number palindrome-number.cpp)
 add_executable(powx-n powx-n.cpp)
+add_executable(reverse-integer reverse-integer.cpp)
 
 # Windowing
 add_executable(minimum-window-substring minimum-window-substring.cpp)
@@ -293,6 +298,7 @@ add_executable(permutation-in-string permutation-in-string.cpp)
 add_executable(find-all-anagrams-in-a-string find-all-anagrams-in-a-string.cpp)
 add_executable(longest-substring-without-repeating-characters longest-substring-without-repeating-characters.cpp)
 add_executable(minimum-size-subarray-sum minimum-size-subarray-sum.cpp)
+add_executable(longest-substring-with-at-least-k-repeating-characters longest-substring-with-at-least-k-repeating-characters.cpp)
 
 # Sudoku
 add_executable(valid-sudoku valid-sudoku.cpp)
