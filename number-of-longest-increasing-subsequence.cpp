@@ -24,7 +24,9 @@ public:
         int maxLength = 1; // 记录最长递增子序列的长度
         for (int i = 0; i < n; ++i) {
             for (int j = 0; j < i; ++j) {
+                // 如果 nums[j] 小于 nums[i]，说明 nums[j] 可以作为 nums[i] 的一个前缀
                 if (nums[j] < nums[i]) {
+                    // 更新 dp[i] 和 count[i]
                     if (dp[j] + 1 > dp[i]) {
                         dp[i] = dp[j] + 1;
                         count[i] = count[j]; // 更新计数

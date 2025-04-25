@@ -99,6 +99,9 @@ add_executable(convert-bst-to-greater-tree convert-bst-to-greater-tree.cpp)
 add_executable(trim-a-binary-search-tree trim-a-binary-search-tree.cpp)
 add_executable(convert-sorted-list-to-binary-search-tree convert-sorted-list-to-binary-search-tree.cpp)
 add_executable(two-sum-iv-input-is-a-bst two-sum-iv-input-is-a-bst.cpp)
+add_executable(lowest-common-ancestor-of-a-binary-search-tree lowest-common-ancestor-of-a-binary-search-tree.cpp)
+add_executable(delete-node-in-a-bst delete-node-in-a-bst.cpp)
+add_executable(merge-two-binary-trees merge-two-binary-trees.cpp)
 
 # BackTracking
 add_executable(combinations combinations.cpp)
@@ -118,6 +121,7 @@ add_executable(subsets subsets.cpp)
 add_executable(subsets-ii subsets-ii.cpp)
 add_executable(gray-code gray-code.cpp)
 add_executable(path-sum-ii path-sum-ii.cpp)
+add_executable(path-sum-iii path-sum-iii.cpp)
 
 # Double Pointer
 add_executable(valid-palindrome valid-palindrome.cpp)
@@ -216,6 +220,7 @@ add_executable(group-anagrams group-anagrams.cpp)
 add_executable(4sum-ii 4sum-ii.cpp)
 add_executable(majority-element majority-element.cpp)
 add_executable(majority-element-ii majority-element-ii.cpp)
+add_executable(clone-graph clone-graph.cpp)
 
 
 # Range
