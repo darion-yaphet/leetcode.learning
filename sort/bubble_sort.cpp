@@ -8,14 +8,17 @@
 // 冒泡排序函数
 void bubbleSort(std::vector<int> &arr) {
     int n = arr.size();
-    bool swapped;
-    for (int i = 0; i < n - 1; i++) {
+    bool swapped; // 标志位，用于检测是否发生交换
+
+    for (int i = 0; i < n - 1; i++) { // 外层循环控制遍历次数
         swapped = false;
+
+        // 内层循环进行相邻元素比较和交换
         for (int j = 0; j < n - i - 1; j++) {
             // 如果当前元素比下一个元素大，则交换它们
             if (arr[j] > arr[j + 1]) {
-                std::swap(arr[j], arr[j + 1]);
-                swapped = true;
+                std::swap(arr[j], arr[j + 1]); // 交换相邻元素
+                swapped = true; // 标记发生了交换
             }
         }
 

@@ -39,4 +39,60 @@ public:
         randomized_quicksort(nums, 0, (int) nums.size() - 1);
         return nums;
     }
+
+    // 合并两个有序子数组
+    void merge(vector<int> &nums, int left, int mid, int right, vector<int> &temp) {
+        // 将 nums[left..mid] 和 nums[mid+1..right] 合并到 temp 中
+        int i = left, j = mid + 1, k = left;
+
+        while (i <= mid && j <= right) {
+            if (nums[i] <= nums[j]) {
+                temp[k++] = nums[i++];
+            } else {
+                temp[k++] = nums[j++];
+            }
+        }
+
+        // 处理剩余元素
+        while (i <= mid) {
+            temp[k++] = nums[i++];
+        }
+
+        while (j <= right) {
+            temp[k++] = nums[j++];
+        }
+
+        // 将 temp 中的结果复制回 nums
+        for (int idx = left; idx <= right; ++idx) {
+            nums[idx] = temp[idx];
+        }
+    }
+
+    // 归并排序的递归实现
+    void mergeSort(vector<int> &nums, int left, int right, vector<int> &temp) {
+        if (left >= right) return; // 基本情况：子数组长度为 1
+
+        int mid = left + (right - left) / 2;
+
+        // 分解：递归排序左右两部分
+        mergeSort(nums, left, mid, temp);
+        mergeSort(nums, mid + 1, right, temp);
+
+        // 合并：将两个有序子数组合并
+        merge(nums, left, mid, right, temp);
+    }
+
+    void sortArray2(vector<int> &nums) {
+        int n = nums.size();
+        // 如果数组为空或只有一个元素，直接返回
+        if (n <= 1) {
+            return;
+        }
+
+        // 创建一个临时数组用于合并操作
+        vector<int> temp(n);
+
+        // 调用归并排序
+        mergeSort(nums, 0, n - 1, temp);
+    }
 };

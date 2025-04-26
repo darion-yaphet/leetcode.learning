@@ -5,57 +5,61 @@
 #include <iostream>
 #include <vector>
 
-// 函数用于交换两个元素的值
-void swap(int *a, int *b) {
-    int t = *a;
-    *a = *b;
-    *b = t;
-}
+using namespace std;
 
-// 划分函数，返回基准元素的最终位置
-int partition(std::vector<int> &arr, int low, int high) {
-    int pivot = arr[high]; // 选择最后一个元素作为基准
-    int i = (low - 1); // 小于基准的元素的索引
+// 分区函数：将数组分为两部分，并返回基准值的最终位置
+// 用于将数组分为两部分，并返回基准值的最终位置。
+// 遍历数组时，将小于基准值的元素交换到左侧部分。
+// 最后将基准值放到正确的位置。
+int partition(vector<int> &nums, int low, int high) {
+    int pivot = nums[high]; // 选择最后一个元素作为基准值
+    int i = low - 1; // i 是小于基准值部分的末尾索引
 
-    for (int j = low; j <= high - 1; j++) {
-        // 如果当前元素小于或等于基准
-        if (arr[j] <= pivot) {
-            i++; // 小于基准的元素索引加1
-            swap(&arr[i], &arr[j]);
+    for (int j = low; j < high; ++j) {
+        if (nums[j] < pivot) {
+            // 如果当前元素小于基准值
+            ++i; // 扩展小于基准值的部分
+            swap(nums[i], nums[j]); // 将当前元素交换到小于基准值的部分
         }
     }
-    swap(&arr[i + 1], &arr[high]);
-    return (i + 1);
+
+    // 将基准值放到正确的位置
+    swap(nums[i + 1], nums[high]);
+    return i + 1; // 返回基准值的索引
 }
 
-// 快速排序函数
-void quickSort(std::vector<int> &arr, int low, int high) {
+// 快速排序主函数
+// 通过选择一个“基准值”（pivot），将数组分为两部分：
+// 一部分小于基准值，另一部分大于基准值，然后递归地对这两部分进行排序。
+void quickSort(vector<int> &nums, int low, int high) {
     if (low < high) {
-        // pi是基准的索引
-        int pi = partition(arr, low, high);
+        // 终止条件：子数组长度为 0 或 1
+        int pi = partition(nums, low, high); // 获取基准值的索引
 
-        // 分别对划分后左右两部分递归排序
-        quickSort(arr, low, pi - 1);
-        quickSort(arr, pi + 1, high);
+        // 递归排序左侧部分和右侧部分
+        quickSort(nums, low, pi - 1);
+        quickSort(nums, pi + 1, high);
     }
 }
 
-// 主函数
 int main() {
-    std::vector<int> arr = {10, 7, 8, 9, 1, 5};
-    int n = arr.size();
+    // 示例输入：一个未排序的数组
+    vector<int> nums = {10, 7, 8, 9, 1, 5};
 
-    std::cout << "Original array: ";
-    for (int i = 0; i < n; i++)
-        std::cout << arr[i] << " ";
-    std::cout << std::endl;
+    cout << "排序前: ";
+    for (int num: nums) {
+        cout << num << " ";
+    }
+    cout << endl;
 
-    quickSort(arr, 0, n - 1);
+    // 调用快速排序函数
+    quickSort(nums, 0, nums.size() - 1);
 
-    std::cout << "Sorted array:   ";
-    for (int i = 0; i < n; i++)
-        std::cout << arr[i] << " ";
-    std::cout << std::endl;
+    cout << "排序后: ";
+    for (int num: nums) {
+        cout << num << " ";
+    }
+    cout << endl;
 
     return 0;
 }

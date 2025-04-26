@@ -5,79 +5,75 @@
 #include <iostream>
 #include <vector>
 
-// 合并两个有序子数组的函数
-void merge(std::vector<int> &arr, int left, int mid, int right) {
-    int n1 = mid - left + 1;
-    int n2 = right - mid;
+using namespace std;
 
-    // 创建临时数组
-    std::vector<int> L(n1), R(n2);
+// 合并两个有序子数组
+// 将数组分成两半，分别对两半进行排序，然后将两个有序的子数组合并成一个有序数组。
+void merge(vector<int>& nums, int left, int mid, int right) {
+    // 创建临时数组存储合并结果
+    vector<int> temp(right - left + 1);
 
-    // 拷贝数据到临时数组
-    for (int i = 0; i < n1; i++)
-        L[i] = arr[left + i];
-    for (int j = 0; j < n2; j++)
-        R[j] = arr[mid + 1 + j];
+    int i = left;     // 左子数组的起始索引
+    int j = mid + 1;  // 右子数组的起始索引
+    int k = 0;        // 临时数组的索引
 
-    // 合并临时数组回原数组
-    int i = 0, j = 0, k = left;
-    while (i < n1 && j < n2) {
-        if (L[i] <= R[j]) {
-            arr[k] = L[i];
-            i++;
+    // 比较左右子数组的元素，按顺序放入临时数组
+    while (i <= mid && j <= right) {
+        if (nums[i] <= nums[j]) {
+            temp[k++] = nums[i++];
         } else {
-            arr[k] = R[j];
-            j++;
+            temp[k++] = nums[j++];
         }
-        k++;
     }
 
-    // 拷贝L的剩余元素
-    while (i < n1) {
-        arr[k] = L[i];
-        i++;
-        k++;
+    // 将剩余的左子数组元素放入临时数组
+    while (i <= mid) {
+        temp[k++] = nums[i++];
     }
 
-    // 拷贝R的剩余元素
-    while (j < n2) {
-        arr[k] = R[j];
-        j++;
-        k++;
+    // 将剩余的右子数组元素放入临时数组
+    while (j <= right) {
+        temp[k++] = nums[j++];
     }
-}
 
-// 归并排序函数
-void mergeSort(std::vector<int> &arr, int left, int right) {
-    if (left < right) {
-        // 找到中间点
-        int mid = left + (right - left) / 2;
-
-        // 分别对左右两半进行排序
-        mergeSort(arr, left, mid);
-        mergeSort(arr, mid + 1, right);
-
-        // 合并两个有序子数组
-        merge(arr, left, mid, right);
+    // 将临时数组的内容复制回原数组
+    for (int idx = 0; idx < temp.size(); ++idx) {
+        nums[left + idx] = temp[idx];
     }
 }
 
-// 主函数
+// 归并排序主函数
+void mergeSort(vector<int>& nums, int left, int right) {
+    if (left >= right) return; // 终止条件：子数组长度为 0 或 1
+
+    int mid = left + (right - left) / 2; // 计算中间位置
+
+    // 递归排序左右两部分
+    mergeSort(nums, left, mid);
+    mergeSort(nums, mid + 1, right);
+
+    // 合并两个有序子数组
+    merge(nums, left, mid, right);
+}
+
 int main() {
-    std::vector<int> arr = {12, 11, 13, 5, 6, 7};
-    int arr_size = arr.size();
+    // 示例输入：一个未排序的数组
+    vector<int> nums = {38, 27, 43, 3, 9, 82, 10};
 
-    std::cout << "Given array is \n";
-    for (int i = 0; i < arr_size; i++)
-        std::cout << arr[i] << " ";
-    std::cout << std::endl;
+    cout << "排序前: ";
+    for (int num : nums) {
+        cout << num << " ";
+    }
+    cout << endl;
 
-    mergeSort(arr, 0, arr_size - 1);
+    // 调用归并排序函数
+    mergeSort(nums, 0, nums.size() - 1);
 
-    std::cout << "Sorted array is \n";
-    for (int i = 0; i < arr_size; i++)
-        std::cout << arr[i] << " ";
-    std::cout << std::endl;
+    cout << "排序后: ";
+    for (int num : nums) {
+        cout << num << " ";
+    }
+    cout << endl;
 
     return 0;
 }

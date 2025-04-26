@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.27)
 project(leetcode_learning)
 
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 add_executable(leetcode_learning main.cpp)
 
@@ -15,6 +16,7 @@ add_executable(repeated-substring-pattern repeated-substring-pattern.cpp)
 #Greed
 add_executable(jump-game jump-game.cpp)
 add_executable(jump-game-ii jump-game-ii.cpp)
+add_executable(jump-game-vi jump-game-vi.cpp)
 add_executable(assign-cookies assign-cookies.cpp)
 add_executable(wiggle-subsequence wiggle-subsequence.cpp)
 add_executable(wiggle-sort-ii wiggle-sort-ii.cpp)
@@ -22,6 +24,7 @@ add_executable(array-partition array-partition.cpp)
 add_executable(valid-palindrome-ii valid-palindrome-ii.cpp)
 add_executable(remove-k-digits remove-k-digits.cpp)
 add_executable(reorganize-string reorganize-string.cpp)
+add_executable(dota2-senate dota2-senate.cpp)
 
 # Array
 add_executable(merge-sorted-array merge-sorted-array.cpp)
@@ -43,6 +46,7 @@ add_executable(zigzag-conversion zigzag-conversion.cpp)
 add_executable(move-zeroes move-zeroes.cpp)
 add_executable(sort-an-array sort-an-array.cpp)
 add_executable(find-the-power-of-k-size-subarrays-i find-the-power-of-k-size-subarrays-i.cpp)
+add_executable(snapshot-array snapshot-array.cpp)
 
 # Matrix
 add_executable(spiral-matrix spiral-matrix.cpp)
@@ -296,6 +300,8 @@ add_executable(nim-game nim-game.cpp)
 add_executable(palindrome-number palindrome-number.cpp)
 add_executable(powx-n powx-n.cpp)
 add_executable(reverse-integer reverse-integer.cpp)
+add_executable(ugly-number ugly-number.cpp)
+add_executable(ugly-number-ii ugly-number-ii.cpp)
 
 # Windowing
 add_executable(minimum-window-substring minimum-window-substring.cpp)
@@ -320,3 +326,4 @@ add_subdirectory(STL)
 
 add_subdirectory(templates)
 add_subdirectory(sort)
+add_subdirectory(search)
