@@ -12,6 +12,7 @@ add_executable(example example.cpp)
 add_executable(longest-common-prefix longest-common-prefix.cpp)
 add_executable(reverse-string reverse-string.cpp)
 add_executable(repeated-substring-pattern repeated-substring-pattern.cpp)
+add_executable(string-to-integer-atoi string-to-integer-atoi.cpp)
 
 #Greed
 add_executable(jump-game jump-game.cpp)
@@ -203,6 +204,7 @@ add_executable(min-stack min-stack.cpp)
 add_executable(evaluate-reverse-polish-notation evaluate-reverse-polish-notation.cpp)
 add_executable(trapping-rain-water trapping-rain-water.cpp)
 add_executable(longest-valid-parentheses longest-valid-parentheses.cpp)
+add_executable(basic-calculator basic-calculator.cpp)
 add_executable(basic-calculator-ii basic-calculator-ii.cpp)
 
 # Queue

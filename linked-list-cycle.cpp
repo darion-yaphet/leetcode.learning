@@ -8,6 +8,10 @@
 
 class Solution {
 public:
+    // 定义两个指针：slow 和 fast。
+    // slow 每次移动一步，fast 每次移动两步。
+    // 如果链表中存在环，fast 和 slow 最终会在环内相遇。
+    // 如果链表中不存在环，fast 会先到达链表的末尾（nullptr）。
     bool hasCycle(ListNode *head) {
         // 空链表或只有一个节点的情况
         if (head == nullptr || head->next == nullptr) {
