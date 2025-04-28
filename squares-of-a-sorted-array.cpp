@@ -25,4 +25,21 @@ public:
 
         return result;
     }
+
+    vector<int> sortedSquares2(vector<int> &nums) {
+        vector<int> result(nums.size(), 0);
+        int left = 0, right = nums.size() - 1;
+        int p = nums.size() - 1;
+
+        while (left <= right) {
+            if (nums[left] * nums[left] < nums[right] * nums[right]) {
+                result[p--] = nums[right] * nums[right];
+                right -= 1;
+            } else {
+                result[p--] = nums[left] * nums[left];
+                left += 1;
+            }
+        }
+        return result;
+    }
 };

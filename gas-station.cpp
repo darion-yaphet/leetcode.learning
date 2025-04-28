@@ -35,4 +35,24 @@ public:
 
         return -1;
     }
+
+    int canCompleteCircuit2(vector<int>& gas, vector<int>& cost) {
+        int totalTank = 0;    // 总油量
+        int currentTank = 0;  // 当前油量
+        int start = 0;        // 起点
+
+        for (int i = 0; i < gas.size(); ++i) {
+            totalTank += gas[i] - cost[i];    // 累积总油量
+            currentTank += gas[i] - cost[i];  // 累积当前油量
+
+            // 如果当前油量不足以到达下一站
+            if (currentTank < 0) {
+                start = i + 1;       // 更新起点为下一站
+                currentTank = 0;     // 重置当前油量
+            }
+        }
+
+        // 如果总油量不足，返回 -1；否则返回起点
+        return totalTank >= 0 ? start : -1;
+    }
 };

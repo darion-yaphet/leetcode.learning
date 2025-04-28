@@ -26,9 +26,12 @@ public:
         int len = s.size();
         for (int i = 0; i < len; i++) {
             int value = map[s[i]];
+
+            // 如果当前字符的值小于下一个字符的值，则是减法情况
             if (i < len - 1 && value < map[s[i + 1]]) {
                 result -= value;
             } else {
+                // 否则是加法情况
                 result += value;
             }
         }

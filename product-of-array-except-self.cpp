@@ -37,4 +37,25 @@ public:
         }
         return result;
     }
+
+    vector<int> productExceptSelf2(vector<int> &nums) {
+        int n = nums.size();
+        vector<int> answer(n, 1); // 初始化 answer 数组为全 1
+
+        // 第一次遍历：计算左侧乘积
+        int leftProduct = 1;
+        for (int i = 0; i < n; ++i) {
+            answer[i] = leftProduct; // 当前位置的左侧乘积
+            leftProduct *= nums[i]; // 更新左侧乘积
+        }
+
+        // 第二次遍历：计算右侧乘积，并更新 answer
+        int rightProduct = 1;
+        for (int i = n - 1; i >= 0; --i) {
+            answer[i] *= rightProduct; // 当前位置的右侧乘积
+            rightProduct *= nums[i]; // 更新右侧乘积
+        }
+
+        return answer;
+    }
 };

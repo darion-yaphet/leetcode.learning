@@ -13,6 +13,7 @@ add_executable(longest-common-prefix longest-common-prefix.cpp)
 add_executable(reverse-string reverse-string.cpp)
 add_executable(repeated-substring-pattern repeated-substring-pattern.cpp)
 add_executable(string-to-integer-atoi string-to-integer-atoi.cpp)
+add_executable(excel-sheet-column-title excel-sheet-column-title.cpp)
 
 #Greed
 add_executable(jump-game jump-game.cpp)
