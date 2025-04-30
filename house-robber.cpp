@@ -10,7 +10,6 @@ using namespace std;
 
 class Solution {
 public:
-
     int rob2(vector<int> &nums) {
         int n = nums.size();
         // dp[i] = x 表示：
@@ -49,5 +48,34 @@ public:
         int result = max(nums[start] + dp(nums, start + 2, memo), dp(nums, start + 1, memo));
         memo[start] = result;
         return result;
+    }
+
+
+    /**
+     * 如果偷第 i 间房屋，则不能偷第 i-1 间房屋：dp[i] = dp[i-2] + nums[i]。
+     * 如果不偷第 i 间房屋，则可以保留前 i-1 间房屋的最大金额：dp[i] = dp[i-1]。
+     *
+     * dp[i]=max(dp[i−1],dp[i−2]+nums[i])
+     */
+    int rob3(vector<int> &nums) {
+        int n = nums.size();
+
+        // 没有房屋，返回 0
+        if (n == 0) return 0;
+
+        // 只有一间房屋，直接返回其金额
+        if (n == 1) return nums[0];
+
+        // 初始化两个变量，分别表示前一间房屋和前两间房屋的最大金额
+        int prev2 = 0; // dp[i-2]
+        int prev1 = 0; // dp[i-1]
+
+        for (int i = 0; i < n; ++i) {
+            int current = max(prev1, prev2 + nums[i]); // 当前状态的最大金额
+            prev2 = prev1; // 更新 dp[i-2]
+            prev1 = current; // 更新 dp[i-1]
+        }
+
+        return prev1; // 返回最终结果
     }
 };

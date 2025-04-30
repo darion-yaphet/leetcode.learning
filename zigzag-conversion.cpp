@@ -2,7 +2,7 @@
 // Created by Chenguang Wang on 2024/2/15.
 //
 
-//https://leetcode.cn/problems/zigzag-conversion/description/
+// https://leetcode.cn/problems/zigzag-conversion/description/
 
 #include <string>
 #include <vector>

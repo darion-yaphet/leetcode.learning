@@ -128,6 +128,8 @@ add_executable(subsets-ii subsets-ii.cpp)
 add_executable(gray-code gray-code.cpp)
 add_executable(path-sum-ii path-sum-ii.cpp)
 add_executable(path-sum-iii path-sum-iii.cpp)
+add_executable(partition-to-k-equal-sum-subsets partition-to-k-equal-sum-subsets.cpp)
+add_executable(the-number-of-beautiful-subsets the-number-of-beautiful-subsets.cpp)
 
 # Double Pointer
 add_executable(valid-palindrome valid-palindrome.cpp)
@@ -175,6 +177,7 @@ add_executable(perfect-squares perfect-squares.cpp)
 add_executable(longest-palindromic-substring longest-palindromic-substring.cpp)
 add_executable(maximal-square maximal-square.cpp)
 add_executable(palindrome-partitioning palindrome-partitioning.cpp)
+add_executable(palindrome-partitioning-ii palindrome-partitioning-ii.cpp)
 add_executable(palindromic-substrings palindromic-substrings.cpp)
 add_executable(longest-palindromic-subsequence longest-palindromic-subsequence.cpp)
 add_executable(longest-continuous-increasing-subsequence longest-continuous-increasing-subsequence.cpp)
@@ -188,6 +191,7 @@ add_executable(different-ways-to-add-parentheses different-ways-to-add-parenthes
 add_executable(longest-arithmetic-subsequence-of-given-difference longest-arithmetic-subsequence-of-given-difference.cpp)
 add_executable(destroy-sequential-targets destroy-sequential-targets.cpp)
 add_executable(number-of-longest-increasing-subsequence number-of-longest-increasing-subsequence.cpp)
+add_executable(wildcard-matching wildcard-matching.cpp)
 
 # 0-1 Package
 
