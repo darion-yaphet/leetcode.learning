@@ -108,6 +108,10 @@ add_executable(two-sum-iv-input-is-a-bst two-sum-iv-input-is-a-bst.cpp)
 add_executable(lowest-common-ancestor-of-a-binary-search-tree lowest-common-ancestor-of-a-binary-search-tree.cpp)
 add_executable(delete-node-in-a-bst delete-node-in-a-bst.cpp)
 add_executable(merge-two-binary-trees merge-two-binary-trees.cpp)
+add_executable(serialize-and-deserialize-bst serialize-and-deserialize-bst.cpp)
+add_executable(serialize-and-deserialize-binary-tree serialize-and-deserialize-binary-tree.cpp)
+add_executable(second-minimum-node-in-a-binary-tree second-minimum-node-in-a-binary-tree.cpp)
+add_executable(search-in-a-binary-search-tree search-in-a-binary-search-tree.cpp)
 
 # BackTracking
 add_executable(combinations combinations.cpp)
@@ -277,6 +281,7 @@ add_executable(kth-largest-element-in-an-array kth-largest-element-in-an-array.c
 add_executable(find-k-pairs-with-smallest-sums find-k-pairs-with-smallest-sums.cpp)
 add_executable(find-k-th-smallest-pair-distance find-k-th-smallest-pair-distance.cpp)
 add_executable(longest-happy-string longest-happy-string.cpp)
+add_executable(kth-largest-element-in-a-stream kth-largest-element-in-a-stream.cpp)
 add_executable(kth-smallest-element-in-a-sorted-matrix kth-smallest-element-in-a-sorted-matrix.cpp)
 
 # Binary Search
