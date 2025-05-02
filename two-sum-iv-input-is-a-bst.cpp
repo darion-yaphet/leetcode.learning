@@ -17,7 +17,10 @@ public:
 
 private:
     bool dfs(TreeNode *node, int k, std::unordered_set<int> &seen) {
-        if (!node) return false; // 如果节点为空，返回 false
+        // 如果节点为空，返回 false
+        if (node == nullptr) {
+            return false;
+        }
 
         // 检查是否存在另一个数使得两数之和等于 k
         if (seen.count(k - node->val)) {
@@ -40,7 +43,7 @@ int main() {
     //     3   6
     //    / \    \
     //   2   4    7
-    TreeNode* root = new TreeNode(5);
+    TreeNode *root = new TreeNode(5);
     root->left = new TreeNode(3, new TreeNode(2), new TreeNode(4));
     root->right = new TreeNode(6, nullptr, new TreeNode(7));
 

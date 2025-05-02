@@ -61,10 +61,14 @@ public:
         int n = nums.size();
 
         // 没有房屋，返回 0
-        if (n == 0) return 0;
+        if (n == 0) {
+            return 0;
+        }
 
         // 只有一间房屋，直接返回其金额
-        if (n == 1) return nums[0];
+        if (n == 1) {
+            return nums[0];
+        }
 
         // 初始化两个变量，分别表示前一间房屋和前两间房屋的最大金额
         int prev2 = 0; // dp[i-2]

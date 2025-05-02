@@ -11,6 +11,7 @@ using namespace std;
 class Solution {
 public:
     int coinChange(vector<int> &coins, int amount) {
+        // 定义 dp 数组，dp[i] 表示凑成金额 i 所需的最少硬币个数
         vector<int> dp(amount + 1, amount + 1);
         dp[0] = 0;
 

@@ -17,7 +17,10 @@ public:
     }
 
     int climbStairs2(int n) {
-        if (n <= 1) return 1; // 边界条件
+        // 边界条件
+        if (n <= 1) {
+            return 1;
+        }
 
         int prev1 = 1, prev2 = 1; // 初始状态：f(0) 和 f(1)
 

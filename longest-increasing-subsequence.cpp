@@ -11,22 +11,23 @@ using namespace std;
 class Solution {
 public:
     int lengthOfLIS(vector<int> &nums) {
-        int size = nums.size();
-        int dp[size];
-        for (int i = 0; i < size; i++) {
-            dp[i] = 1;
+        int n = nums.size();
+        if (n == 0) {
+            return 0;
         }
 
-        int result;
-        for (int i = 0; i < size; i++) {
+        vector<int> dp(n, 1); // dp[i] 表示以 nums[i] 结尾的最长递增子序列长度
+
+        // 对于所有 j<i 且 nums[j]<nums[i]
+        // dp[i]=max(dp[j]+1)
+        for (int i = 1; i < n; i++) {
             for (int j = 0; j < i; j++) {
-                if (nums[i] > nums[j]) {
-                    dp[i] = max(dp[i], nums[j] + 1);
+                if (nums[j] < nums[i]) {
+                    dp[i] = max(dp[i], dp[j] + 1);
                 }
             }
-            result = max(result, dp[i]);
         }
 
-        return result;
+        return *max_element(dp.begin(), dp.end()); // 返回 dp 数组中的最大值
     }
 };

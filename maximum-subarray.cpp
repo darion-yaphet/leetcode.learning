@@ -8,6 +8,10 @@
 
 using namespace std;
 
+/**
+ * 如果当前子数组的和变成负数了，那么它对后续子数组的贡献就是负面的，
+ * 应该放弃当前子数组并从下一个元素重新开始计算。
+ */
 class Solution {
 public:
     int maxSubArray(vector<int> &nums) {
@@ -40,5 +44,25 @@ public:
             }
         }
         return result;
+    }
+
+    // Kadane's Algorithm
+    int maxSubArray3(vector<int>& nums) {
+        int n = nums.size();
+        if (n == 0) return 0;
+
+        // 初始化变量
+        int currentSum = nums[0]; // 当前子数组的和
+        int maxSum = nums[0];     // 全局最大子数组和
+
+        // 遍历数组
+        for (int i = 1; i < n; ++i) {
+            // 更新当前子数组的和
+            currentSum = max(nums[i], currentSum + nums[i]);
+            // 更新全局最大子数组和
+            maxSum = max(maxSum, currentSum);
+        }
+
+        return maxSum;
     }
 };
