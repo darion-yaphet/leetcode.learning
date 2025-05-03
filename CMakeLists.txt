@@ -27,6 +27,7 @@ add_executable(valid-palindrome-ii valid-palindrome-ii.cpp)
 add_executable(remove-k-digits remove-k-digits.cpp)
 add_executable(reorganize-string reorganize-string.cpp)
 add_executable(dota2-senate dota2-senate.cpp)
+add_executable(minimum-domino-rotations-for-equal-row minimum-domino-rotations-for-equal-row.cpp)
 
 # Array
 add_executable(merge-sorted-array merge-sorted-array.cpp)
@@ -112,6 +113,10 @@ add_executable(serialize-and-deserialize-bst serialize-and-deserialize-bst.cpp)
 add_executable(serialize-and-deserialize-binary-tree serialize-and-deserialize-binary-tree.cpp)
 add_executable(second-minimum-node-in-a-binary-tree second-minimum-node-in-a-binary-tree.cpp)
 add_executable(search-in-a-binary-search-tree search-in-a-binary-search-tree.cpp)
+add_executable(print-binary-tree print-binary-tree.cpp)
+add_executable(univalued-binary-tree univalued-binary-tree.cpp)
+add_executable(increasing-order-search-tree increasing-order-search-tree.cpp)
+add_executable(convert-binary-number-in-a-linked-list-to-integer convert-binary-number-in-a-linked-list-to-integer.cpp)
 
 # BackTracking
 add_executable(combinations combinations.cpp)
@@ -210,6 +215,7 @@ add_executable(next-greater-element-i next-greater-element-i.cpp)
 add_executable(next-greater-element-ii next-greater-element-ii.cpp)
 add_executable(next-greater-element-iii next-greater-element-iii.cpp)
 add_executable(min-stack min-stack.cpp)
+add_executable(max-stack max-stack.cpp)
 add_executable(evaluate-reverse-polish-notation evaluate-reverse-polish-notation.cpp)
 add_executable(trapping-rain-water trapping-rain-water.cpp)
 add_executable(longest-valid-parentheses longest-valid-parentheses.cpp)
@@ -274,6 +280,8 @@ add_executable(reverse-string-ii reverse-string-ii.cpp)
 add_executable(sort-list sort-list.cpp)
 add_executable(reorder-list reorder-list.cpp)
 add_executable(odd-even-linked-list odd-even-linked-list.cpp)
+add_executable(design-hashset design-hashset.cpp)
+add_executable(design-hashmap design-hashmap.cpp)
 
 
 # Heap
