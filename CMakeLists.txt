@@ -50,6 +50,7 @@ add_executable(move-zeroes move-zeroes.cpp)
 add_executable(sort-an-array sort-an-array.cpp)
 add_executable(find-the-power-of-k-size-subarrays-i find-the-power-of-k-size-subarrays-i.cpp)
 add_executable(snapshot-array snapshot-array.cpp)
+add_executable(contains-duplicate contains-duplicate.cpp)
 
 # Matrix
 add_executable(spiral-matrix spiral-matrix.cpp)
@@ -116,7 +117,11 @@ add_executable(search-in-a-binary-search-tree search-in-a-binary-search-tree.cpp
 add_executable(print-binary-tree print-binary-tree.cpp)
 add_executable(univalued-binary-tree univalued-binary-tree.cpp)
 add_executable(increasing-order-search-tree increasing-order-search-tree.cpp)
+add_executable(all-nodes-distance-k-in-binary-tree all-nodes-distance-k-in-binary-tree.cpp)
 add_executable(convert-binary-number-in-a-linked-list-to-integer convert-binary-number-in-a-linked-list-to-integer.cpp)
+add_executable(reverse-odd-levels-of-binary-tree reverse-odd-levels-of-binary-tree.cpp)
+add_executable(even-odd-tree even-odd-tree.cpp)
+
 
 # BackTracking
 add_executable(combinations combinations.cpp)
@@ -242,6 +247,7 @@ add_executable(4sum-ii 4sum-ii.cpp)
 add_executable(majority-element majority-element.cpp)
 add_executable(majority-element-ii majority-element-ii.cpp)
 add_executable(clone-graph clone-graph.cpp)
+add_executable(maximum-xor-of-two-numbers-in-an-array maximum-xor-of-two-numbers-in-an-array.cpp)
 
 
 # Range

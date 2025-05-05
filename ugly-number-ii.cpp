@@ -9,28 +9,16 @@ using namespace std;
 // https://leetcode.cn/problems/ugly-number-ii/
 class Solution {
 public:
-    // function nthUglyNumber(n):
-    // dp = array of size n
-    // dp[0] = 1
-    // p2, p3, p5 = 0, 0, 0
-    //
-    // for i from 1 to n-1:
-    //     next2 = dp[p2] * 2
-    //     next3 = dp[p3] * 3
-    //     next5 = dp[p5] * 5
-    //     dp[i] = min(next2, next3, next5)
-    //
-    //     if dp[i] == next2: p2 += 1
-    //     if dp[i] == next3: p3 += 1
-    //     if dp[i] == next5: p5 += 1
-    //
-    // return dp[n-1]
     int nthUglyNumber(int n) {
+        // 初始化 dp 数组，dp[i] 表示第 i+1 个丑数
         vector<int> dp(n);
         dp[0] = 1;
+
+        // 定义三个指针，分别对应乘以 2、3 和 5 的位置
         int p2 = 0, p3 = 0, p5 = 0;
 
         for (int i = 1; i < n; i++) {
+            // 计算下一个丑数
             int next2 = dp[p2] * 2;
             int next3 = dp[p3] * 3;
             int next5 = dp[p5] * 5;
@@ -49,6 +37,8 @@ public:
                 ++p5;
             }
         }
+
+        // 返回第 n 个丑数
         return dp[n - 1];
     }
 };
