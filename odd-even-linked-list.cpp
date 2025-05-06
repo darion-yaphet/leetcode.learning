@@ -29,7 +29,6 @@ public:
 
         // 将奇数链表的尾部连接到偶数链表的头部
         odd->next = evenHead;
-
         return head; // 返回重新排序的链表头节点
     }
 };

@@ -288,6 +288,8 @@ add_executable(reorder-list reorder-list.cpp)
 add_executable(odd-even-linked-list odd-even-linked-list.cpp)
 add_executable(design-hashset design-hashset.cpp)
 add_executable(design-hashmap design-hashmap.cpp)
+add_executable(minimum-pair-removal-to-sort-array-i minimum-pair-removal-to-sort-array-i.cpp)
+add_executable(swapping-nodes-in-a-linked-list swapping-nodes-in-a-linked-list.cpp)
 
 
 # Heap
