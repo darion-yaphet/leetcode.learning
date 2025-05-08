@@ -39,15 +39,15 @@ public:
             TreeNode *node = stack.top();
             if (node != nullptr) {
                 stack.pop();
-                stack.push(node);                          // 中
+                stack.push(node); // 中
                 stack.push(nullptr);
 
                 if (node->right) {
-                    stack.push(node->right);  // 右
+                    stack.push(node->right); // 右
                 }
 
                 if (node->left) {
-                    stack.push(node->left);    // 左
+                    stack.push(node->left); // 左
                 }
 
             } else {

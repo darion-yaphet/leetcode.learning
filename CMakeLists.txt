@@ -71,10 +71,10 @@ add_executable(binary-tree-postorder-traversal binary-tree-postorder-traversal.c
 add_executable(binary-tree-level-order-traversal binary-tree-level-order-traversal.cpp)
 add_executable(binary-tree-level-order-traversal-ii binary-tree-level-order-traversal-ii.cpp)
 add_executable(binary-tree-right-side-view binary-tree-right-side-view.cpp)
+add_executable(binary-tree-zigzag-level-order-traversal binary-tree-zigzag-level-order-traversal.cpp)
 add_executable(average-of-levels-in-binary-tree average-of-levels-in-binary-tree.cpp)
 add_executable(n-ary-tree-level-order-traversal n-ary-tree-level-order-traversal.cpp)
 add_executable(find-largest-value-in-each-tree-row find-largest-value-in-each-tree-row.cpp)
-add_executable(binary-tree-zigzag-level-order-traversal binary-tree-zigzag-level-order-traversal.cpp)
 add_executable(populating-next-right-pointers-in-each-node populating-next-right-pointers-in-each-node.cpp)
 add_executable(populating-next-right-pointers-in-each-node-ii populating-next-right-pointers-in-each-node-ii.cpp)
 add_executable(minimum-absolute-difference-in-bst minimum-absolute-difference-in-bst.cpp)
@@ -85,6 +85,7 @@ add_executable(sum-root-to-leaf-numbers sum-root-to-leaf-numbers.cpp)
 add_executable(flatten-binary-tree-to-linked-list flatten-binary-tree-to-linked-list.cpp)
 add_executable(convert-sorted-array-to-binary-search-tree convert-sorted-array-to-binary-search-tree.cpp)
 add_executable(binary-tree-maximum-path-sum binary-tree-maximum-path-sum.cpp)
+add_executable(cousins-in-binary-tree cousins-in-binary-tree.cpp)
 add_executable(cousins-in-binary-tree-ii cousins-in-binary-tree-ii.cpp)
 add_executable(lowest-common-ancestor-of-a-binary-tree lowest-common-ancestor-of-a-binary-tree.cpp)
 add_executable(balanced-binary-tree balanced-binary-tree.cpp)
@@ -121,7 +122,9 @@ add_executable(all-nodes-distance-k-in-binary-tree all-nodes-distance-k-in-binar
 add_executable(convert-binary-number-in-a-linked-list-to-integer convert-binary-number-in-a-linked-list-to-integer.cpp)
 add_executable(reverse-odd-levels-of-binary-tree reverse-odd-levels-of-binary-tree.cpp)
 add_executable(even-odd-tree even-odd-tree.cpp)
-
+add_executable(count-good-nodes-in-binary-tree count-good-nodes-in-binary-tree.cpp)
+add_executable(maximum-width-of-binary-tree maximum-width-of-binary-tree.cpp)
+add_executable(deepest-leaves-sum deepest-leaves-sum.cpp)
 
 # BackTracking
 add_executable(combinations combinations.cpp)
@@ -233,6 +236,7 @@ add_executable(design-circular-deque design-circular-deque.cpp)
 add_executable(number-of-students-unable-to-eat-lunch number-of-students-unable-to-eat-lunch.cpp)
 add_executable(top-k-frequent-elements top-k-frequent-elements.cpp)
 add_executable(queue-reconstruction-by-height queue-reconstruction-by-height.cpp)
+add_executable(design-front-middle-back-queue design-front-middle-back-queue.cpp)
 
 # Hash Table
 add_executable(ransom-note ransom-note.cpp)
@@ -321,6 +325,8 @@ add_executable(count-sub-islands count-sub-islands.cpp)
 add_executable(all-paths-from-source-to-target all-paths-from-source-to-target.cpp)
 add_executable(course-schedule course-schedule.cpp)
 add_executable(course-schedule-ii course-schedule-ii.cpp)
+add_executable(course-schedule-iii course-schedule-iii.cpp)
+add_executable(course-schedule-iv course-schedule-iv.cpp)
 add_executable(redundant-connection redundant-connection.cpp)
 
 # Math

@@ -23,4 +23,15 @@ public:
                                return element.second == value;
                            });
     }
+
+    bool repeatedSubstringPattern2(std::string s) {
+        if (s.empty()) {
+            return false;
+        }
+
+        std::string doubled = s + s;
+        // 去掉首尾字符
+        std::string mid = doubled.substr(1, doubled.size() - 2);
+        return mid.find(s) != std::string::npos;
+    }
 };

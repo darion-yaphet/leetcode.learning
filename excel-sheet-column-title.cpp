@@ -10,7 +10,7 @@ using namespace std;
 class Solution {
 public:
     string convertToTitle(int columnNumber) {
-        string result = ""; // 存储最终结果
+        string result = "";
 
         while (columnNumber > 0) {
             // 处理当前位的字母
