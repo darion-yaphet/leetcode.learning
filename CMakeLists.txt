@@ -14,6 +14,7 @@ add_executable(reverse-string reverse-string.cpp)
 add_executable(repeated-substring-pattern repeated-substring-pattern.cpp)
 add_executable(string-to-integer-atoi string-to-integer-atoi.cpp)
 add_executable(excel-sheet-column-title excel-sheet-column-title.cpp)
+add_executable(multiply-strings multiply-strings.cpp)
 
 #Greed
 add_executable(jump-game jump-game.cpp)
@@ -256,6 +257,7 @@ add_executable(maximum-xor-of-two-numbers-in-an-array maximum-xor-of-two-numbers
 
 # Range
 add_executable(summary-ranges summary-ranges.cpp)
+add_executable(remove-covered-intervals remove-covered-intervals.cpp)
 
 # Bit
 add_executable(add-binary add-binary.cpp)

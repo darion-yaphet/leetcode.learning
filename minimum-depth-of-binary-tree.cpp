@@ -49,7 +49,8 @@ public:
                     que.push(node->right);
                 }
 
-                if (!node->left && !node->right) { // 当左右孩⼦都为空的时候，说明是最低点的⼀层了，退出
+                // 当左右孩⼦都为空的时候，说明是最低点的⼀层了，退出
+                if (!node->left && !node->right) {
                     return depth;
                 }
             }

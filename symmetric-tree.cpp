@@ -18,7 +18,11 @@ public:
             return false;
         }
 
-        return left->val == right->val && helper(left->left, right->right) && helper(left->right, right->left);
+        if (left->val != right->val) {
+            return false;
+        }
+
+        return helper(left->left, right->right) && helper(left->right, right->left);
     }
 
     bool isSymmetric(TreeNode *root) {

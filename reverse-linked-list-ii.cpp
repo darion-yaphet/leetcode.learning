@@ -31,4 +31,30 @@ public:
         head->next = reverseBetween(head->next, left - 1, right - 1);
         return head;
     }
+
+    ListNode *reverseBetween2(ListNode *head, int left, int right) {
+        // 创建一个虚拟头节点，简化边界情况处理
+        ListNode dummy(0);
+        dummy.next = head;
+        ListNode *prev = &dummy;
+
+        // 移动prev指针到left-1的位置
+        for (int i = 0; i < left - 1; ++i) {
+            prev = prev->next;
+        }
+
+        // start指向left位置的节点，end用于遍历并反转
+        ListNode *start = prev->next;
+        ListNode *end = start->next;
+
+        // 反转从left到right之间的节点
+        for (int i = 0; i < right - left; ++i) {
+            start->next = end->next;
+            end->next = prev->next;
+            prev->next = end;
+            end = start->next;
+        }
+
+        return dummy.next;
+    }
 };

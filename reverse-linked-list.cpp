@@ -20,10 +20,7 @@ public:
     }
 
     ListNode *reverseList2(ListNode *head) {
-        ListNode *pre, *current, *next;
-        pre = nullptr;
-        current = head;
-        next = head;
+        ListNode *pre = nullptr, *current = head, *next = nullptr;
 
         while (current != nullptr) {
             next = current->next;

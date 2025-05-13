@@ -11,6 +11,11 @@ using namespace std;
 
 class Solution {
 public:
+    /**
+     * 利用数组的有序性，选择数组的中间元素作为根节点。
+     * 数组的左半部分用于构建左子树，右半部分用于构建右子树。
+     * 递归地对左右两部分重复上述过程，直到数组为空。
+     */
     TreeNode *sortedArrayToBST(vector<int> &nums) {
         return helper(nums, 0, nums.size() - 1);
     }
@@ -20,7 +25,7 @@ public:
             return nullptr;
         }
 
-        int mid = (left + right) / 2;
+        int mid = left + (right - left) / 2;
         auto *root = new TreeNode(nums[mid]);
         root->left = helper(nums, left, mid - 1);
         root->right = helper(nums, mid + 1, right);
