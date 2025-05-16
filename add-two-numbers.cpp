@@ -51,4 +51,32 @@ public:
 
         return dummy->next;
     }
+
+    ListNode *addTwoNumbers2(ListNode *l1, ListNode *l2) {
+        ListNode dummy(0); // 虚拟头节点
+        ListNode *curr = &dummy; // 当前节点指针
+        int carry = 0; // 进位值
+
+        while (l1 || l2 || carry > 0) {
+            int x = l1 ? l1->val : 0;
+            int y = l2 ? l2->val : 0;
+
+            int sum = x + y + carry;
+            int digit = sum % 10;
+            carry = sum / 10;
+
+            curr->next = new ListNode(digit);
+            curr = curr->next;
+
+            if (l1 != nullptr) {
+                l1 = l1->next;
+            }
+
+            if (l2 != nullptr) {
+                l2 = l2->next;
+            }
+        }
+
+        return dummy.next;
+    }
 };

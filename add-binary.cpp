@@ -29,4 +29,34 @@ public:
         reverse(ans.begin(), ans.end());
         return ans;
     }
+
+    string addBinary2(string a, string b) {
+        string result;
+        int i = a.size() - 1;
+        int j = b.size() - 1;
+        int carry = 0;
+
+        while (i >= 0 || j >= 0 || carry > 0) {
+            int sum = carry;
+
+            // 只有当字符是 '1' 时才加 1
+            if (i >= 0 && a[i] == '1') {
+                sum += 1;
+            }
+
+            if (j >= 0 && b[j] == '1') {
+                sum += 1;
+            }
+
+            result.push_back((sum % 2) == 1 ? '1' : '0');
+            // 更新进位
+            carry = sum / 2;
+
+            --i;
+            --j;
+        }
+
+        reverse(result.begin(), result.end());
+        return result;
+    }
 };

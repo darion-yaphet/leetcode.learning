@@ -15,6 +15,8 @@ add_executable(repeated-substring-pattern repeated-substring-pattern.cpp)
 add_executable(string-to-integer-atoi string-to-integer-atoi.cpp)
 add_executable(excel-sheet-column-title excel-sheet-column-title.cpp)
 add_executable(multiply-strings multiply-strings.cpp)
+add_executable(complex-number-multiplication complex-number-multiplication.cpp)
+add_executable(a-number-after-a-double-reversal a-number-after-a-double-reversal.cpp)
 
 #Greed
 add_executable(jump-game jump-game.cpp)
@@ -53,6 +55,7 @@ add_executable(find-the-power-of-k-size-subarrays-i find-the-power-of-k-size-sub
 add_executable(snapshot-array snapshot-array.cpp)
 add_executable(contains-duplicate contains-duplicate.cpp)
 add_executable(number-of-arithmetic-triplets number-of-arithmetic-triplets.cpp)
+add_executable(count-and-say count-and-say.cpp)
 
 # Matrix
 add_executable(spiral-matrix spiral-matrix.cpp)
@@ -233,6 +236,8 @@ add_executable(trapping-rain-water trapping-rain-water.cpp)
 add_executable(longest-valid-parentheses longest-valid-parentheses.cpp)
 add_executable(basic-calculator basic-calculator.cpp)
 add_executable(basic-calculator-ii basic-calculator-ii.cpp)
+add_executable(longest-absolute-file-path longest-absolute-file-path.cpp)
+add_executable(score-of-parentheses score-of-parentheses.cpp)
 
 # Queue
 add_executable(design-circular-queue design-circular-queue.cpp)
@@ -277,6 +282,7 @@ add_executable(linked-list-cycle-ii linked-list-cycle-ii.cpp)
 add_executable(merge-two-sorted-lists merge-two-sorted-lists.cpp)
 add_executable(partition-list partition-list.cpp)
 add_executable(add-two-numbers add-two-numbers.cpp)
+add_executable(add-two-numbers-ii add-two-numbers-ii.cpp)
 add_executable(merge-k-sorted-lists merge-k-sorted-lists.cpp)
 add_executable(kth-node-from-end-of-list-lcci kth-node-from-end-of-list-lcci.cpp)
 add_executable(remove-nth-node-from-end-of-list remove-nth-node-from-end-of-list.cpp)

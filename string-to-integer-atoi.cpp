@@ -41,4 +41,49 @@ public:
         // 4. 返回结果
         return result * sign;
     }
+
+    int myAtoi2(string s) {
+        int i = 0;
+        int n = s.size();
+
+        // Step 1: Skip leading whitespace
+        while (i < n && isspace(s[i])) {
+            ++i;
+        }
+
+        // Step 2: Check for sign
+        int sign = 1;
+        if (i < n && (s[i] == '+' || s[i] == '-')) {
+            sign = (s[i] == '-') ? -1 : 1;
+            ++i;
+        }
+
+        // Step 3: Skip leading zeros
+        while (i < n && s[i] == '0') {
+            ++i;
+        }
+
+        // Step 4: Read digits and build number
+        long long result = 0;
+        while (i < n && isdigit(s[i])) {
+            result = result * 10 + (s[i] - '0');
+
+            // Early stop if overflow
+            if (result > INT_MAX) {
+                break;
+            }
+            ++i;
+        }
+
+        result *= sign;
+        // Step 5: Clamp to 32-bit signed integer range
+        if (result < INT_MIN) {
+            return INT_MIN;
+        }
+
+        if (result > INT_MAX) {
+            return INT_MAX;
+        }
+        return static_cast<int>(result);
+    }
 };

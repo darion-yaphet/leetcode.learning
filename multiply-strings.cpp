@@ -9,6 +9,11 @@ using namespace std;
 
 class Solution {
 public:
+    /**
+     * i 位和 j 位相乘的结果位置是 i + j + 1
+     * 结果数组长度最多是 len(num1) + len(num2)
+     * 从后往前遍历两个字符串
+     */
     string multiply(string num1, string num2) {
         int n = num1.size();
         int m = num2.size();
