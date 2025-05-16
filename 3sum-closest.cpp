@@ -6,18 +6,30 @@
 #include <vector>
 #include <algorithm> // 提供 sort 函数
 #include <cmath>     // 提供 abs 函数
+
 using namespace std;
 
+// https://leetcode.cn/problems/3sum-closest/
 class Solution {
 public:
-    int threeSumClosest(vector<int>& nums, int target) {
+    /**
+     * 固定第一个数 nums[i]，设置左指针 left = i + 1，右指针 right = n - 1
+     * 计算当前三数之和 sum = nums[i] + nums[left] + nums[right]
+     * 比较 abs(sum - target) 和当前最小差值，更新最接近的和
+     */
+    int threeSumClosest(vector<int> &nums, int target) {
         int n = nums.size();
-        if (n < 3) return 0; // 边界条件：数组长度不足 3
+
+        // 边界条件：数组长度不足 3
+        if (n < 3) {
+            return 0;
+        }
 
         // 对数组进行排序
         sort(nums.begin(), nums.end());
 
-        int closestSum = nums[0] + nums[1] + nums[2]; // 初始化为前三数之和
+        // 初始化为前三数之和
+        int closestSum = nums[0] + nums[1] + nums[2];
 
         // 遍历数组，固定第一个数
         for (int i = 0; i < n - 2; ++i) {
@@ -54,10 +66,10 @@ int main() {
     vector<int> nums1 = {-1, 2, 1, -4}; // 最接近的和是 2 (-1 + 2 + 1)
     int target1 = 1;
 
-    vector<int> nums2 = {0, 0, 0};      // 最接近的和是 0 (0 + 0 + 0)
+    vector<int> nums2 = {0, 0, 0}; // 最接近的和是 0 (0 + 0 + 0)
     int target2 = 1;
 
-    vector<int> nums3 = {1, 1, 1, 0};   // 最接近的和是 2 (1 + 1 + 0)
+    vector<int> nums3 = {1, 1, 1, 0}; // 最接近的和是 2 (1 + 1 + 0)
     int target3 = 100;
 
     cout << "Test 1: " << solution.threeSumClosest(nums1, target1) << endl;

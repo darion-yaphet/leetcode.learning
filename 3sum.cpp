@@ -1,7 +1,9 @@
 //
 // Created by Chenguang Wang on 2024/1/28.
 //
+
 #include <vector>
+#include <iostream>
 #include <unordered_map>
 
 // https://leetcode.cn/problems/3sum/description/
@@ -10,8 +12,13 @@ using namespace std;
 
 class Solution {
 public:
-    vector<vector<int>> threeSum(vector<int> &nums) {
-        vector<vector<int>> result;
+    /**
+     * a + b + c == 0
+     *
+     * a, b, c 在数组中的下标互不相同
+     */
+    vector<vector<int> > threeSum(vector<int> &nums) {
+        vector<vector<int> > result;
 
         int n = nums.size();
         sort(nums.begin(), nums.end());
@@ -52,8 +59,8 @@ public:
         return result;
     }
 
-    vector<vector<int>> threeSum2(vector<int>& nums) {
-        vector<vector<int>> result; // 存储所有满足条件的三元组
+    vector<vector<int> > threeSum2(vector<int> &nums) {
+        vector<vector<int> > result; // 存储所有满足条件的三元组
         int n = nums.size();
 
         // 对数组进行排序
@@ -98,3 +105,19 @@ public:
         return result;
     }
 };
+
+int main() {
+    Solution solution;
+    vector<int> nums = {-1, 0, 1, 2, -1, -4};
+    vector<vector<int> > res = solution.threeSum2(nums);
+
+    cout << "所有满足条件的三元组：" << endl;
+    for (const auto &triplet: res) {
+        cout << "[";
+        for (int num: triplet)
+            cout << num << " ";
+        cout << "]" << endl;
+    }
+
+    return 0;
+}

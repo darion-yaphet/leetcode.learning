@@ -5,6 +5,7 @@
 // https://leetcode.cn/problems/longest-consecutive-sequence/description/
 
 #include <vector>
+#include <unordered_set>
 
 using namespace std;
 
@@ -29,5 +30,32 @@ public:
             }
         }
         return result;
+    }
+
+    int longestConsecutive2(vector<int> &nums) {
+        unordered_set<int> numSet(nums.begin(), nums.end());
+
+        int longest = 0;
+        for (int num: numSet) {
+
+            // 判断当前数字是否是某个连续序列的第一个数字。
+            // 也就是说，如果 num - 1 不在集合中，说明 num 是起始点。
+
+            // 只处理连续序列的起始点
+            if (numSet.find(num - 1) == numSet.end()) {
+                int currentNum = num;
+                int currentLength = 1;
+
+                // 向上查找连续序列
+                while (numSet.find(currentNum + 1) != numSet.end()) {
+                    currentNum++;
+                    currentLength++;
+                }
+
+                longest = max(longest, currentLength);
+            }
+        }
+
+        return longest;
     }
 };

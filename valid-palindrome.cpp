@@ -11,30 +11,6 @@ using namespace std;
 class Solution {
 public:
     bool isPalindrome(string s) {
-//        if (s == "") {
-//            return true;
-//        }
-//
-//        for (int i = 0, j = s.size() - 1; i != j;) {
-//            while (i < j && isalnum(s[i])) {
-//                i++;
-//            }
-//
-//            while (i < j && isalnum(s[j])) {
-//                j--;
-//            }
-//
-//            if (i < j) {
-//                if (tolower(s[i]) != tolower(s[j])) {
-//                    return false;
-//                }
-//                i++;
-//                j--;
-//            }
-//        }
-//
-//        return true;
-
         int n = s.size();
         int left = 0, right = n - 1;
         while (left < right) {
@@ -59,8 +35,9 @@ public:
         string cleaned; // 存储清理后的字符串
 
         // 遍历字符串，保留字母和数字，并将大写字母转换为小写
-        for (char c : s) {
-            if (isalnum(c)) { // 检查是否是字母或数字
+        for (char c: s) {
+            if (isalnum(c)) {
+                // 检查是否是字母或数字
                 cleaned += tolower(c); // 转换为小写并添加到清理后的字符串
             }
         }

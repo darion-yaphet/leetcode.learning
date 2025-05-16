@@ -10,7 +10,11 @@ using namespace std;
 
 class Solution {
 public:
-    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+    /**
+     * 左边元素个数 == 右边元素个数（或相差不超过1）
+     * 左边最大值 ≤ 右边最小值
+     */
+    double findMedianSortedArrays(vector<int> &nums1, vector<int> &nums2) {
         // 确保 nums1 是较短的数组
         if (nums1.size() > nums2.size()) {
             swap(nums1, nums2); // 交换 nums1 和 nums2
@@ -24,7 +28,7 @@ public:
 
         while (left <= right) {
             int i = (left + right) / 2; // nums1 的划分点
-            int j = half_len - i;       // nums2 的划分点
+            int j = half_len - i; // nums2 的划分点
 
             // 边界条件处理
             int nums1_left_max = (i == 0) ? numeric_limits<int>::min() : nums1[i - 1];
@@ -32,12 +36,14 @@ public:
             int nums2_left_max = (j == 0) ? numeric_limits<int>::min() : nums2[j - 1];
             int nums2_right_min = (j == n) ? numeric_limits<int>::max() : nums2[j];
 
-            // 检查是否满足划分条件
+            // 检查是否满足划分条件: 左边最大值 <= 右边最小值
             if (nums1_left_max <= nums2_right_min && nums2_left_max <= nums1_right_min) {
-                // 找到正确的划分点
-                if ((m + n) % 2 == 1) { // 总长度为奇数
+                // 找到正确的划分点: 奇数个元素
+                if ((m + n) % 2 == 1) {
+                    // 总长度为奇数
                     return max(nums1_left_max, nums2_left_max);
-                } else { // 总长度为偶数
+                } else {
+                    // 总长度为偶数
                     return (max(nums1_left_max, nums2_left_max) + min(nums1_right_min, nums2_right_min)) / 2.0;
                 }
             } else if (nums1_left_max > nums2_right_min) {

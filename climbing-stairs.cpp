@@ -16,6 +16,23 @@ public:
         return result;
     }
 
+    int climbStairs1(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        }
+
+        int a = 1; // f(n-2)
+        int b = 1; // f(n-1)
+
+        for (int i = 2; i <= n; ++i) {
+            int c = a + b;
+            a = b;
+            b = c;
+        }
+
+        return b;
+    }
+
     int climbStairs2(int n) {
         // 边界条件
         if (n <= 1) {

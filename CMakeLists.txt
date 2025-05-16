@@ -52,6 +52,7 @@ add_executable(sort-an-array sort-an-array.cpp)
 add_executable(find-the-power-of-k-size-subarrays-i find-the-power-of-k-size-subarrays-i.cpp)
 add_executable(snapshot-array snapshot-array.cpp)
 add_executable(contains-duplicate contains-duplicate.cpp)
+add_executable(number-of-arithmetic-triplets number-of-arithmetic-triplets.cpp)
 
 # Matrix
 add_executable(spiral-matrix spiral-matrix.cpp)
@@ -126,6 +127,7 @@ add_executable(even-odd-tree even-odd-tree.cpp)
 add_executable(count-good-nodes-in-binary-tree count-good-nodes-in-binary-tree.cpp)
 add_executable(maximum-width-of-binary-tree maximum-width-of-binary-tree.cpp)
 add_executable(deepest-leaves-sum deepest-leaves-sum.cpp)
+add_executable(verify-preorder-serialization-of-a-binary-tree verify-preorder-serialization-of-a-binary-tree.cpp)
 
 # BackTracking
 add_executable(combinations combinations.cpp)
@@ -148,6 +150,7 @@ add_executable(path-sum-ii path-sum-ii.cpp)
 add_executable(path-sum-iii path-sum-iii.cpp)
 add_executable(partition-to-k-equal-sum-subsets partition-to-k-equal-sum-subsets.cpp)
 add_executable(the-number-of-beautiful-subsets the-number-of-beautiful-subsets.cpp)
+add_executable(split-array-into-fibonacci-sequence split-array-into-fibonacci-sequence.cpp)
 
 # Double Pointer
 add_executable(valid-palindrome valid-palindrome.cpp)
@@ -248,6 +251,7 @@ add_executable(happy-number happy-number.cpp)
 add_executable(valid-anagram valid-anagram.cpp)
 add_executable(contains-duplicate-ii contains-duplicate-ii.cpp)
 add_executable(group-anagrams group-anagrams.cpp)
+add_executable(4sum 4sum.cpp)
 add_executable(4sum-ii 4sum-ii.cpp)
 add_executable(majority-element majority-element.cpp)
 add_executable(majority-element-ii majority-element-ii.cpp)

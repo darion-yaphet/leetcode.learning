@@ -53,4 +53,18 @@ public:
         }
         return prev1; // 最终结果是 F(n)
     }
+
+    int fib3(int n) {
+        if (n == 0 || n == 1) {
+            return n;
+        }
+
+        int a = 0, b = 1;
+        for (int i = 2; i <= n; i++) {
+            int tmp = a + b;
+            a = b;
+            b = tmp;
+        }
+        return b;
+    }
 };
