@@ -44,9 +44,13 @@ void merge(vector<int>& nums, int left, int mid, int right) {
 
 // 归并排序主函数
 void mergeSort(vector<int>& nums, int left, int right) {
-    if (left >= right) return; // 终止条件：子数组长度为 0 或 1
+    // 终止条件：子数组长度为 0 或 1
+    if (left >= right) {
+        return;
+    }
 
-    int mid = left + (right - left) / 2; // 计算中间位置
+    // 计算中间位置
+    int mid = left + (right - left) / 2;
 
     // 递归排序左右两部分
     mergeSort(nums, left, mid);

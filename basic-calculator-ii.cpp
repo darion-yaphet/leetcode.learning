@@ -5,6 +5,9 @@
 // https://leetcode.cn/problems/basic-calculator-ii/
 
 #include <string>
+#include <stack>
+
+using namespace std;
 
 class Solution {
 public:
@@ -45,5 +48,47 @@ public:
         // 将最后一个操作数加入结果
         result += last;
         return result;
+    }
+
+    int calculate2(string s) {
+        stack<int> nums;
+        int num = 0;
+        char sign = '+';
+
+        for (int i = 0; i < s.size(); ++i) {
+            char c = s[i];
+
+            if (isdigit(c)) {
+                num = num * 10 + (c - '0');
+            }
+
+            // 如果是运算符或者到了结尾，处理前一个运算符
+            if ((!isdigit(c) && c != ' ') || i == s.size() - 1) {
+                if (sign == '+') {
+                    nums.push(num);
+                } else if (sign == '-') {
+                    nums.push(-num);
+                } else if (sign == '*') {
+                    int top = nums.top();
+                    nums.pop();
+                    nums.push(top * num);
+                } else if (sign == '/') {
+                    int top = nums.top();
+                    nums.pop();
+                    nums.push(top / num);
+                }
+
+                sign = c;         // 更新当前符号
+                num = 0;          // 重置数字
+            }
+        }
+
+        int res = 0;
+        while (!nums.empty()) {
+            res += nums.top();
+            nums.pop();
+        }
+
+        return res;
     }
 };

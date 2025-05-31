@@ -21,6 +21,7 @@ add_executable(a-number-after-a-double-reversal a-number-after-a-double-reversal
 #Greed
 add_executable(jump-game jump-game.cpp)
 add_executable(jump-game-ii jump-game-ii.cpp)
+add_executable(jump-game-iii jump-game-iii.cpp)
 add_executable(jump-game-vi jump-game-vi.cpp)
 add_executable(assign-cookies assign-cookies.cpp)
 add_executable(wiggle-subsequence wiggle-subsequence.cpp)
@@ -56,6 +57,7 @@ add_executable(snapshot-array snapshot-array.cpp)
 add_executable(contains-duplicate contains-duplicate.cpp)
 add_executable(number-of-arithmetic-triplets number-of-arithmetic-triplets.cpp)
 add_executable(count-and-say count-and-say.cpp)
+add_executable(missing-number missing-number.cpp)
 
 # Matrix
 add_executable(spiral-matrix spiral-matrix.cpp)
@@ -130,7 +132,10 @@ add_executable(even-odd-tree even-odd-tree.cpp)
 add_executable(count-good-nodes-in-binary-tree count-good-nodes-in-binary-tree.cpp)
 add_executable(maximum-width-of-binary-tree maximum-width-of-binary-tree.cpp)
 add_executable(deepest-leaves-sum deepest-leaves-sum.cpp)
+add_executable(add-one-row-to-tree add-one-row-to-tree.cpp)
 add_executable(verify-preorder-serialization-of-a-binary-tree verify-preorder-serialization-of-a-binary-tree.cpp)
+add_executable(flip-equivalent-binary-trees flip-equivalent-binary-trees.cpp)
+add_executable(leaf-similar-trees leaf-similar-trees.cpp)
 
 # BackTracking
 add_executable(combinations combinations.cpp)
@@ -163,6 +168,9 @@ add_executable(3sum-closest 3sum-closest.cpp)
 add_executable(two-sum-ii-input-array-is-sorted two-sum-ii-input-array-is-sorted.cpp)
 add_executable(container-with-most-water container-with-most-water.cpp)
 add_executable(longest-consecutive-sequence longest-consecutive-sequence.cpp)
+add_executable(sum-of-square-numbers sum-of-square-numbers.cpp)
+add_executable(sort-array-by-parity sort-array-by-parity.cpp)
+add_executable(sort-array-by-parity-ii sort-array-by-parity-ii.cpp)
 
 # DP
 add_executable(climbing-stairs climbing-stairs.cpp)
@@ -246,6 +254,7 @@ add_executable(number-of-students-unable-to-eat-lunch number-of-students-unable-
 add_executable(top-k-frequent-elements top-k-frequent-elements.cpp)
 add_executable(queue-reconstruction-by-height queue-reconstruction-by-height.cpp)
 add_executable(design-front-middle-back-queue design-front-middle-back-queue.cpp)
+add_executable(find-consecutive-integers-from-a-data-stream find-consecutive-integers-from-a-data-stream.cpp)
 
 # Hash Table
 add_executable(ransom-note ransom-note.cpp)

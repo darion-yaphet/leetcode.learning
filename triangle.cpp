@@ -6,6 +6,7 @@
 
 using namespace std;
 
+// https://leetcode.cn/problems/triangle/
 class Solution {
 public:
     int minimumTotal(vector<vector<int>> &triangle) {
