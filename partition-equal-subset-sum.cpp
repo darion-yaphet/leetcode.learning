@@ -6,34 +6,36 @@
 
 using namespace std;
 
+// https://leetcode.cn/problems/partition-equal-subset-sum
 class Solution {
 public:
     bool canPartition(vector<int> &nums) {
-        int sum = 0;
+        int total = 0;
         for (int num: nums) {
-            sum += num;
+            total += num;
         }
 
-        if (sum % 2 != 0) {
+        // 如果总和是奇数，无法均分
+        if (total % 2 != 0) {
             return false;
         }
 
-        int target = sum / 2;
-        vector<vector<bool>> dp(nums.size(), vector<bool>(target + 1, false));
-        for (int i = 0; i < nums.size(); i++) {
-            dp[i][0] = true;
-        }
+        int target = total / 2;
 
-        dp[0][nums[0]] = true;
-        for (int i = 1; i < nums.size(); i++) { // 遍历物品
-            for (int j = 1; j <= target; j++) { // 遍历背包容量
-                if (j >= nums[i]) {
-                    dp[i][j] = dp[i - 1][j] || dp[i - 1][j - nums[i]];
-                } else {
-                    dp[i][j] = dp[i - 1][j];
-                }
+        // 是否能从前几个数字中选出一些，使得它们的和恰好为 i
+        vector<bool> dp(target + 1, false);
+        dp[0] = true;
+
+        for (int num: nums) {
+            // 从后往前更新 dp，避免重复使用当前数字
+            for (int i = target; i >= num; --i) {
+                // 不选当前这个数，已经可以凑出 i
+                // 或者
+                // 选当前这个数，如果 i - num 可以凑出，那么加上 num 就能凑出 i
+                dp[i] = dp[i] || dp[i - num];
             }
         }
-        return dp[nums.size() - 1][target];
+
+        return dp[target];
     }
 };

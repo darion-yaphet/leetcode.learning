@@ -363,6 +363,7 @@ add_executable(minimum-window-substring minimum-window-substring.cpp)
 add_executable(permutation-in-string permutation-in-string.cpp)
 add_executable(find-all-anagrams-in-a-string find-all-anagrams-in-a-string.cpp)
 add_executable(longest-substring-without-repeating-characters longest-substring-without-repeating-characters.cpp)
+add_executable(longest-subsequence-with-target longest-subsequence-with-target.cpp)
 add_executable(minimum-size-subarray-sum minimum-size-subarray-sum.cpp)
 add_executable(longest-substring-with-at-least-k-repeating-characters longest-substring-with-at-least-k-repeating-characters.cpp)
 
