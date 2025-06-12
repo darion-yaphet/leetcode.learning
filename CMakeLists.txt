@@ -383,3 +383,5 @@ add_subdirectory(STL)
 add_subdirectory(templates)
 add_subdirectory(sort)
 add_subdirectory(search)
+
+add_subdirectory(rakuten)
