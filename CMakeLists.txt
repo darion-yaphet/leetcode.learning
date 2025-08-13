@@ -17,6 +17,13 @@ add_executable(excel-sheet-column-title excel-sheet-column-title.cpp)
 add_executable(multiply-strings multiply-strings.cpp)
 add_executable(complex-number-multiplication complex-number-multiplication.cpp)
 add_executable(a-number-after-a-double-reversal a-number-after-a-double-reversal.cpp)
+add_executable(implement-trie-prefix-tree implement-trie-prefix-tree.cpp)
+
+# Trie Tree
+add_executable(design-add-and-search-words-data-structure design-add-and-search-words-data-structure.cpp)
+
+# Depth First Search
+add_executable(binary-tree-tilt binary-tree-tilt.cpp)
 
 #Greed
 add_executable(jump-game jump-game.cpp)
@@ -159,6 +166,7 @@ add_executable(path-sum-iii path-sum-iii.cpp)
 add_executable(partition-to-k-equal-sum-subsets partition-to-k-equal-sum-subsets.cpp)
 add_executable(the-number-of-beautiful-subsets the-number-of-beautiful-subsets.cpp)
 add_executable(split-array-into-fibonacci-sequence split-array-into-fibonacci-sequence.cpp)
+add_executable(binary-watch binary-watch.cpp)
 
 # Double Pointer
 add_executable(valid-palindrome valid-palindrome.cpp)
@@ -171,6 +179,7 @@ add_executable(longest-consecutive-sequence longest-consecutive-sequence.cpp)
 add_executable(sum-of-square-numbers sum-of-square-numbers.cpp)
 add_executable(sort-array-by-parity sort-array-by-parity.cpp)
 add_executable(sort-array-by-parity-ii sort-array-by-parity-ii.cpp)
+add_executable(dutch_national_flag_problem dutch_national_flag_problem.cpp)
 
 # DP
 add_executable(climbing-stairs climbing-stairs.cpp)
@@ -366,6 +375,7 @@ add_executable(longest-substring-without-repeating-characters longest-substring-
 add_executable(longest-subsequence-with-target longest-subsequence-with-target.cpp)
 add_executable(minimum-size-subarray-sum minimum-size-subarray-sum.cpp)
 add_executable(longest-substring-with-at-least-k-repeating-characters longest-substring-with-at-least-k-repeating-characters.cpp)
+add_executable(arithmetic-slices arithmetic-slices.cpp)
 
 # Sudoku
 add_executable(valid-sudoku valid-sudoku.cpp)
@@ -385,3 +395,7 @@ add_subdirectory(sort)
 add_subdirectory(search)
 
 add_subdirectory(rakuten)
+
+add_subdirectory(design_pattern)
+
+add_executable(point point_examples.cpp)
